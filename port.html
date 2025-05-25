@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Kaushik | Cybersecurity Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --red: #e63946;
+            --red-dark: #c1121f;
+            --red-light: #ff8fa3;
+            --white: #f1faee;
+            --off-white: #e5e5e5;
+            --gray: #6c757d;
+            --light-gray: #dee2e6;
+            --black: #121212;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--red);
+        }
+        
+        .btn {
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: var(--white);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            border-color: var(--red);
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            background-color: var(--red);
+            color: var(--white);
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background-color: var(--red);
+            margin: 0 auto;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--red);
+                display: none;
+                padding: 20px 0;
+                z-index: 50;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu a {
+                margin: 10px 0;
+            }
+            
+            .hamburger {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-opacity-95 bg-black z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-white text-2xl font-bold">
+                    DK
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-[#e63946] transition-colors duration-300">
+                        Home
+                    </a>
+                    <a href="#skills" class="text-white hover:text-[#e63946] transition-colors duration-300">
+                        Skills
+                    </a>
+                    <a href="#projects" class="text-white hover:text-[#e63946] transition-colors duration-300">
+                        Projects
+                    </a>
+                    <a href="#contact" class="text-white hover:text-[#e63946] transition-colors duration-300">
+                        Contact
+                    </a>
+                </div>
+                
+                <button class="md:hidden text-white focus:outline-none hamburger" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="md:hidden nav-menu" id="mobile-menu">
+                <a href="#home" class="block text-white hover:text-[#e63946] py-2">
+                    Home
+                </a>
+                <a href="#skills" class="block text-white hover:text-[#e63946] py-2">
+                    Skills
+                </a>
+                <a href="#projects" class="block text-white hover:text-[#e63946] py-2">
+                    Projects
+                </a>
+                <a href="#contact" class="block text-white hover:text-[#e63946] py-2">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden bg-black">
+        <div class="container mx-auto px-4 py-16 z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-[#e63946] mb-6 text-lg font-light tracking-wider">CYBERSECURITY SPECIALIST</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 text-white font-['Playfair_Display']">
+                    Dinesh Kaushik
+                </h1>
+                <div class="h-1 w-24 bg-[#e63946] mb-10 mx-auto"></div>
+                <p class="text-white mb-12 max-w-lg mx-auto text-lg leading-relaxed">
+                    A cybersecurity enthusiast with a solid foundation in ethical hacking, vulnerability analysis, and
+                    cryptographic techniques.
+                </p>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#projects" class="btn bg-transparent border-2 border-[#e63946] text-[#e63946] px-8 py-3 rounded-md hover:bg-[#e63946] hover:text-white transition-all duration-300 font-medium">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn bg-[#e63946] text-white px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#e63946]">Skills</h2>
+                <div class="section-divider mb-8"></div>
+                <p class="text-[#6c757d] mt-6 max-w-2xl mx-auto">
+                    Proficient in Python, C, and Java, with practical experience using tools like
+                    Nmap, Wireshark, and Metasploit for threat detection and analysis.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Python</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">C</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Java</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">SQL</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Nmap</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Wireshark</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Metasploit</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Kali Linux</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Cryptography</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Ethical Hacking</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Vulnerability Analysis</span>
+                </div>
+                <div class="skill-pill bg-[#f8f9fa] text-[#6c757d] px-5 py-4 rounded-md border border-[#e5e5e5] text-center">
+                    <span class="font-medium">Network Security</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-[#e63946] text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Projects</h2>
+                <div class="section-divider mb-8 bg-white"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-lg text-[#6c757d]">
+                    <div class="p-8">
+                        <div class="text-[#e63946] text-xl mb-4 font-medium">
+                            <i class="fas fa-shield-alt mr-2"></i> SECURITY RESEARCH
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-[#e63946]">Comparative Analysis of AES Algorithms in LSB Based Steganography</h3>
+                        <p class="text-[#6c757d] mb-6">
+                            Compared AES - 128, 192 and 256 Algorithms to show the efficient encryption of LSB Based Text and Image Steganography
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">Python</span>
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">AES Algorithm</span>
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">LSB Techniques</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-sm text-[#6c757d]">
+                                <i class="far fa-calendar-alt mr-2"></i> July 2024
+                            </div>
+                            <a href="#" class="text-[#e63946] hover:text-[#c1121f] transition-colors duration-300">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-lg text-[#6c757d]">
+                    <div class="p-8">
+                        <div class="text-[#e63946] text-xl mb-4 font-medium">
+                            <i class="fas fa-network-wired mr-2"></i> NETWORK ANALYSIS
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-[#e63946]">Pyshark Integrated with Python</h3>
+                        <p class="text-[#6c757d] mb-6">
+                            Integrated Pyshark with Python for Real Time Network Traffic Capture and Analysis
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">Python</span>
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">Pyshark</span>
+                            <span class="text-xs bg-[#f8f9fa] text-[#e63946] px-3 py-1 rounded-md border border-[#e5e5e5]">Wireshark</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-sm text-[#6c757d]">
+                                <i class="far fa-calendar-alt mr-2"></i> To be Published
+                            </div>
+                            <a href="#" class="text-[#e63946] hover:text-[#c1121f] transition-colors duration-300">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#e63946]">Get In Touch</h2>
+                <div class="section-divider mb-8"></div>
+                <p class="text-[#6c757d] mt-4 max-w-lg mx-auto">
+                    I'm currently available for new cybersecurity opportunities and professional collaborations.
+                    Feel free to reach out with inquiries or to discuss potential security projects.
+                </p>
+            </div>
+            
+            <div class="max-w-md mx-auto bg-[#f8f9fa] rounded-lg p-8 shadow-lg">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-[#e63946] rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#e63946]">Email</h3>
+                        <a href="mailto:d.dineshkaushik1234@gmail.com" class="text-[#e63946] hover:underline">
+                            d.dineshkaushik1234@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-[#6c757d] mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-white border border-[#e5e5e5] rounded-md py-2 px-4 text-[#6c757d] focus:outline-none focus:ring-2 focus:ring-[#e63946]" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-[#6c757d] mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full bg-white border border-[#e5e5e5] rounded-md py-2 px-4 text-[#6c757d] focus:outline-none focus:ring-2 focus:ring-[#e63946]" required>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-[#6c757d] mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full bg-white border border-[#e5e5e5] rounded-md py-2 px-4 text-[#6c757d] focus:outline-none focus:ring-2 focus:ring-[#e63946]" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn w-full bg-[#e63946] text-white py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                </form>
+                
+                <div id="form-message" class="mt-4 text-center hidden"></div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-[#6c757d] hover:text-[#e63946] transition-colors duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-[#6c757d] hover:text-[#e63946] transition-colors duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-[#6c757d] hover:text-[#e63946] transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-white">
+                © 2024 Dinesh Kaushik | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (document.getElementById('mobile-menu').classList.contains('active')) {
+                    document.getElementById('mobile-menu').classList.remove('active');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('text-[#e63946]');
+            formMessage.innerHTML = 'Thank you for your message. I will respond to your inquiry promptly.';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a78f1a17ba4704',t:'MTc0NjM1NzEwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
